@@ -21,16 +21,10 @@ Keine Build-Tools nötig – die Seite kann bei jedem beliebigen Hoster
 1. **Fotos einfügen**: Bilder in `images/` ablegen und die mit
    `PLATZHALTER` kommentierten SVG-Blöcke in `index.html` durch
    `<img>`-Tags ersetzen (Anleitung in `images/LIESMICH.txt`).
-2. **E-Mail-Adresse eintragen**:
-   - In `index.html` unten im `<script>`-Block die Konstante
-     `KONTAKT_EMAIL` setzen (aktuell `anfrage@BITTE-EINTRAGEN.de`).
-   - In `impressum.html` und `datenschutz.html` die markierte Stelle
-     `[E-Mail-Adresse bitte ergänzen]` ausfüllen
-     (eine E-Mail-Adresse im Impressum ist gesetzlich vorgeschrieben).
-3. **Impressum prüfen**: Bei gewerblicher Vermietung ggf.
+2. **Impressum prüfen**: Bei gewerblicher Vermietung ggf.
    USt-IdNr. und Unternehmensbezeichnung ergänzen (Hinweisbox auf der
    Impressum-Seite beachten).
-4. **Datenschutz**: Hosting-Anbieter in der Datenschutzerklärung
+3. **Datenschutz**: Hosting-Anbieter in der Datenschutzerklärung
    benennen (Hinweisbox auf der Seite).
 
 ## Kontaktformular
