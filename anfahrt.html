@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; form-action 'self'; base-uri 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; frame-src https://www.google.com; form-action 'self'; base-uri 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Anfahrt &amp; Lage – Macairestraße 4, Konstanz | Lagerraum Konstanz</title>
   <meta name="description" content="So finden Sie uns: Macairestraße 4, 78467 Konstanz – direkt gegenüber vom Autohaus Auer. Bequeme Anfahrt zum Be- und Entladen.">
@@ -58,7 +58,7 @@
               Route planen
             </a>
           </div>
-          <div class="lageplan">
+          <div class="lageplan karte-wrap" id="karte">
             <svg viewBox="0 0 560 420" role="img" aria-label="Lageplan: Macairestraße 4, gegenüber Autohaus Auer">
               <rect width="560" height="420" fill="#1b1e23"/>
               <rect x="0" y="180" width="560" height="60" fill="#22262c" stroke="#2c3138"/>
@@ -72,6 +72,14 @@
               <line x1="185" y1="146" x2="185" y2="180" stroke="#f7b500" stroke-width="2"/>
               <polygon points="185,186 179,174 191,174" fill="#f7b500"/>
             </svg>
+            <div class="karte-consent">
+              <p><strong>Interaktive Karte anzeigen?</strong></p>
+              <button type="button" id="karte-laden" class="btn btn-gelb">Google Maps laden</button>
+              <p class="karte-hinweis">
+                Beim Laden werden Daten (u.&nbsp;a. Ihre IP-Adresse) an Google übertragen.
+                Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -95,7 +103,7 @@
     <div class="cta-band">
       <div class="container">
         <h2>Fragen zur Anfahrt?</h2>
-        <a class="btn" href="tel:+491778121437">0177 8121437</a>
+        <a class="btn" href="tel:+491778121437"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> 0177 8121437</a>
       </div>
     </div>
 
@@ -111,6 +119,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/karte.js" defer></script>
 
 </body>
 </html>
