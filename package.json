@@ -1,0 +1,8 @@
+{
+  "name": "lagerraum-konstanz",
+  "private": true,
+  "description": "Statische Website – kein Build nötig. `npm run dev` startet nur einen lokalen Vorschau-Server.",
+  "scripts": {
+    "dev": "npx -y serve -l 5173 ."
+  }
+}
