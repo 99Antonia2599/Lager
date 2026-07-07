@@ -335,6 +335,83 @@ section.ohne-abstand-oben {
   margin-bottom: 0.75rem;
 }
 
+/* Inline-Icons (Telefon, WhatsApp) */
+.icon {
+  width: 1.05em;
+  height: 1.05em;
+  fill: currentColor;
+  display: inline-block;
+  vertical-align: -0.15em;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #131518;
+}
+
+.btn-whatsapp:hover {
+  background: #3ae078;
+}
+
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #25d366;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.whatsapp-link:hover {
+  text-decoration: underline;
+}
+
+/* Google-Maps-Karte (Zwei-Klick-Lösung) */
+.karte-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+
+.karte-wrap svg {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}
+
+.karte-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.karte-consent {
+  position: absolute;
+  inset: 0;
+  background: rgba(19, 21, 24, 0.78);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.karte-consent p {
+  color: var(--text);
+}
+
+.karte-consent .karte-hinweis {
+  font-size: 0.85rem;
+  color: var(--text-gedimmt);
+  max-width: 380px;
+}
+
+.karte-consent .karte-hinweis a {
+  color: var(--gelb);
+}
+
 .eyebrow {
   font-family: var(--display);
   font-size: 0.95rem;

@@ -46,7 +46,12 @@ Die Seite ist als statische Website mit minimaler Angriffsfläche gebaut:
 
 - **Content-Security-Policy** auf jeder Seite (`default-src 'none'`,
   nur eigene Skripte/Styles/Bilder/Schriften, keine Inline-Skripte
-  oder Inline-Styles, `base-uri 'none'`, `upgrade-insecure-requests`)
+  oder Inline-Styles, `base-uri 'none'`, `upgrade-insecure-requests`);
+  einzige Ausnahme: die Anfahrtsseite erlaubt `frame-src`
+  für die Google-Maps-Karte
+- **Google Maps als Zwei-Klick-Lösung** (`js/karte.js`) – die Karte
+  lädt erst nach aktiver Einwilligung des Besuchers, vorher fließen
+  keine Daten an Google (DSGVO)
 - **Referrer-Policy** `strict-origin-when-cross-origin`
 - Externe Links mit `rel="noopener noreferrer"`
 - JavaScript nur als externe Datei (`js/kontakt.js`), kein `innerHTML`,
