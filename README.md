@@ -14,6 +14,7 @@ Macairestraße 4, 78467 Konstanz.
 | `impressum.html` | Impressum |
 | `datenschutz.html` | Datenschutzerklärung |
 | `css/style.css` | Gesamtes Styling (dunkles Industrial-Design) |
+| `js/effekte.js` | Startseiten-Animationen: Rolltor öffnet einmal pro Sitzung, Karten blenden beim Scrollen ein (ohne JavaScript bleibt alles sichtbar, `prefers-reduced-motion` wird respektiert) |
 | `fonts/` | Lokal gehostete Schriften (Barlow / Barlow Condensed, DSGVO-konform ohne Google-Server) |
 | `images/` | Fotos und Favicon |
 
@@ -54,7 +55,8 @@ Die Seite ist als statische Website mit minimaler Angriffsfläche gebaut:
   keine Daten an Google (DSGVO)
 - **Referrer-Policy** `strict-origin-when-cross-origin`
 - Externe Links mit `rel="noopener noreferrer"`
-- JavaScript nur als externe Datei (`js/kontakt.js`), kein `innerHTML`,
+- JavaScript nur als externe Dateien (`js/kontakt.js`, `js/karte.js`,
+  `js/effekte.js`), kein `innerHTML`,
   Formulardaten werden ausschließlich URL-kodiert an `mailto:` übergeben
 - Keine Cookies, kein Tracking, keine Inhalte von Fremd-Servern
   (auch Schriften lokal)
@@ -70,4 +72,12 @@ Beim Hosting zusätzlich beachten:
 
 ## Lokal ansehen
 
-`index.html` einfach im Browser öffnen – mehr ist nicht nötig.
+Zwei Möglichkeiten:
+
+1. **Ohne alles**: `index.html` einfach im Browser öffnen (Doppelklick) –
+   die Seite funktioniert komplett ohne Server.
+2. **Mit lokalem Server** (näher am späteren Hosting, z. B. GitHub Pages):
+   `npm run dev` ausführen und `http://localhost:5173` öffnen.
+   Benötigt nur eine installierte Node.js-Version; es wird nichts ins
+   Projekt installiert (kein `node_modules`, kein Build – das Skript
+   startet lediglich den Vorschau-Server `serve` über `npx`).
