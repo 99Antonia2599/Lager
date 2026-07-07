@@ -323,6 +323,18 @@ section {
   padding: 4.5rem 0;
 }
 
+section.ohne-abstand-oben {
+  padding-top: 0;
+}
+
+.link-gelb {
+  color: var(--gelb);
+}
+
+.kontakt-info p.abstand-klein {
+  margin-bottom: 0.75rem;
+}
+
 .eyebrow {
   font-family: var(--display);
   font-size: 0.95rem;

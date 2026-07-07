@@ -40,6 +40,29 @@ oder [Formspree](https://formspree.io) anbinden: dazu im `<form>`-Tag
 `action="https://formsubmit.co/IHRE-EMAIL" method="POST"` ergänzen und
 den `<script>`-Block am Seitenende entfernen.
 
+## Sicherheit
+
+Die Seite ist als statische Website mit minimaler Angriffsfläche gebaut:
+
+- **Content-Security-Policy** auf jeder Seite (`default-src 'none'`,
+  nur eigene Skripte/Styles/Bilder/Schriften, keine Inline-Skripte
+  oder Inline-Styles, `base-uri 'none'`, `upgrade-insecure-requests`)
+- **Referrer-Policy** `strict-origin-when-cross-origin`
+- Externe Links mit `rel="noopener noreferrer"`
+- JavaScript nur als externe Datei (`js/kontakt.js`), kein `innerHTML`,
+  Formulardaten werden ausschließlich URL-kodiert an `mailto:` übergeben
+- Keine Cookies, kein Tracking, keine Inhalte von Fremd-Servern
+  (auch Schriften lokal)
+
+Beim Hosting zusätzlich beachten:
+
+- **HTTPS erzwingen** – bei GitHub Pages: Settings → Pages →
+  Haken bei „Enforce HTTPS"
+- Wer eigenes Hosting nutzt, sollte die CSP zusätzlich als
+  HTTP-Header setzen und `X-Content-Type-Options: nosniff` sowie
+  `frame-ancestors 'none'` (gegen Clickjacking) ergänzen –
+  beides kann ein Meta-Tag technisch nicht leisten.
+
 ## Lokal ansehen
 
 `index.html` einfach im Browser öffnen – mehr ist nicht nötig.
