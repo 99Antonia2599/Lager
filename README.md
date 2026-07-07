@@ -7,10 +7,14 @@ Macairestraße 4, 78467 Konstanz.
 
 | Datei | Inhalt |
 |---|---|
-| `index.html` | Startseite: Hero, Vorteile, Größen, Galerie, Lage, Kontaktformular |
+| `index.html` | Startseite (Reiter „Start"): Hero, Vorteile, Teaser |
+| `lagerraeume.html` | Reiter „Lagerräume": Größen und Foto-Galerie |
+| `anfahrt.html` | Reiter „Anfahrt": Adresse, Lageplan, Maps-Link |
+| `kontakt.html` | Reiter „Kontakt": Kontaktformular und Telefon |
 | `impressum.html` | Impressum |
 | `datenschutz.html` | Datenschutzerklärung |
-| `css/style.css` | Gesamtes Styling |
+| `css/style.css` | Gesamtes Styling (dunkles Industrial-Design) |
+| `fonts/` | Lokal gehostete Schriften (Barlow / Barlow Condensed, DSGVO-konform ohne Google-Server) |
 | `images/` | Fotos und Favicon |
 
 Keine Build-Tools nötig – die Seite kann bei jedem beliebigen Hoster

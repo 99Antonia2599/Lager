@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt &amp; Anfrage | Lagerraum Konstanz</title>
+  <meta name="description" content="Lagerraum in Konstanz anfragen: Telefon 0177 8121437 oder bequem per Kontaktformular. Aktuell Lagerräume frei.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html"><span class="logo-mark">▦</span>Lagerraum <span>&nbsp;Konstanz</span></a>
+      <nav class="tabs" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="lagerraeume.html">Lagerräume</a>
+        <a href="anfahrt.html">Anfahrt</a>
+        <a href="kontakt.html" class="aktiv" aria-current="page">Kontakt</a>
+        <a href="kontakt.html" class="tab-cta">Jetzt anfragen</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="seiten-kopf">
+    <div class="container">
+      <p class="eyebrow">Kontakt</p>
+      <h1>Jetzt Lagerraum sichern</h1>
+      <p>
+        Am schnellsten geht's telefonisch – oder Sie schicken uns eine Anfrage
+        über das Formular. Gerne vereinbaren wir einen Besichtigungstermin.
+      </p>
+    </div>
+  </div>
+
+  <div class="hazard" role="presentation"></div>
+
+  <main>
+
+    <section>
+      <div class="container">
+        <div class="kontakt-grid">
+
+          <div class="kontakt-info">
+            <h3>Direkter Draht</h3>
+            <p>Achim Schächtle ist Ihr Ansprechpartner für alle Fragen rund um die Lagerräume.</p>
+            <a class="telefon" href="tel:+491778121437">0177 8121437</a>
+            <p style="margin-bottom: 0.75rem;">
+              <a class="mail" href="mailto:info@blechdach.de">info@blechdach.de</a>
+            </p>
+            <p>Macairestraße 4<br>78467 Konstanz</p>
+            <ul>
+              <li>Trocken &amp; frostfrei</li>
+              <li>24/7 Zugang</li>
+              <li>Einzeln abschließbar</li>
+              <li>Größen ab 5 m²</li>
+              <li>Aktuell Räume frei</li>
+            </ul>
+          </div>
+
+          <form class="kontakt-formular" id="anfrage-formular">
+            <h3>Anfrage senden</h3>
+            <div class="formular-zeile">
+              <div class="formular-feld">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required autocomplete="name">
+              </div>
+              <div class="formular-feld">
+                <label for="telefon">Telefon *</label>
+                <input type="tel" id="telefon" name="telefon" required autocomplete="tel">
+              </div>
+            </div>
+            <div class="formular-zeile">
+              <div class="formular-feld">
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" autocomplete="email">
+              </div>
+              <div class="formular-feld">
+                <label for="groesse">Gewünschte Größe</label>
+                <select id="groesse" name="groesse">
+                  <option value="">Bitte wählen …</option>
+                  <option>ca. 5 m²</option>
+                  <option>ca. 10 m²</option>
+                  <option>ca. 15 m²</option>
+                  <option>größer als 15 m²</option>
+                  <option>Noch unklar / Beratung gewünscht</option>
+                </select>
+              </div>
+            </div>
+            <div class="formular-feld">
+              <label for="nachricht">Ihre Nachricht *</label>
+              <textarea id="nachricht" name="nachricht" required placeholder="z. B. gewünschter Zeitraum, was gelagert werden soll, Fragen zur Besichtigung …"></textarea>
+            </div>
+            <div class="datenschutz-check">
+              <input type="checkbox" id="datenschutz" required>
+              <label for="datenschutz">
+                Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin
+                mit der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage einverstanden. *
+              </label>
+            </div>
+            <button type="submit" class="btn btn-gelb">Anfrage absenden</button>
+            <p class="formular-hinweis">
+              * Pflichtfelder. Beim Absenden öffnet sich Ihr E-Mail-Programm mit der fertigen
+              Nachricht – alternativ rufen Sie uns einfach an.
+            </p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© 2026 Achim Schächtle – Lagerraum Konstanz · Macairestraße 4, 78467 Konstanz</div>
+      <div>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Kontaktformular: erstellt eine fertige E-Mail im Mailprogramm des Besuchers.
+    // Alternativ kann das Formular an einen Dienst wie formsubmit.co oder Formspree
+    // angebunden werden (siehe README.md).
+    var KONTAKT_EMAIL = "info@blechdach.de";
+
+    document.getElementById("anfrage-formular").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var f = e.target;
+      var betreff = "Anfrage Lagerraum Konstanz – " + f.name.value;
+      var text =
+        "Name: " + f.name.value + "\n" +
+        "Telefon: " + f.telefon.value + "\n" +
+        "E-Mail: " + (f.email.value || "-") + "\n" +
+        "Gewünschte Größe: " + (f.groesse.value || "-") + "\n\n" +
+        "Nachricht:\n" + f.nachricht.value;
+      window.location.href = "mailto:" + KONTAKT_EMAIL +
+        "?subject=" + encodeURIComponent(betreff) +
+        "&body=" + encodeURIComponent(text);
+    });
+  </script>
+
+</body>
+</html>
