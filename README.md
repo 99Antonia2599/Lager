@@ -11,20 +11,17 @@ Macairestraße 4, 78467 Konstanz.
 | `impressum.html` | Impressum |
 | `datenschutz.html` | Datenschutzerklärung |
 | `css/style.css` | Gesamtes Styling |
-| `images/` | Bilder (Fotos folgen – siehe `images/LIESMICH.txt`) |
+| `images/` | Fotos und Favicon |
 
 Keine Build-Tools nötig – die Seite kann bei jedem beliebigen Hoster
 (z. B. IONOS, Strato, Netlify, GitHub Pages) direkt hochgeladen werden.
 
 ## Vor der Veröffentlichung noch zu erledigen
 
-1. **Fotos einfügen**: Bilder in `images/` ablegen und die mit
-   `PLATZHALTER` kommentierten SVG-Blöcke in `index.html` durch
-   `<img>`-Tags ersetzen (Anleitung in `images/LIESMICH.txt`).
-2. **Impressum prüfen**: Bei gewerblicher Vermietung ggf.
+1. **Impressum prüfen**: Bei gewerblicher Vermietung ggf.
    USt-IdNr. und Unternehmensbezeichnung ergänzen (Hinweisbox auf der
    Impressum-Seite beachten).
-3. **Datenschutz**: Hosting-Anbieter in der Datenschutzerklärung
+2. **Datenschutz**: Hosting-Anbieter in der Datenschutzerklärung
    benennen (Hinweisbox auf der Seite).
 
 ## Kontaktformular

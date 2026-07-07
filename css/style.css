@@ -333,6 +333,11 @@ section h2 {
   gap: 1.25rem;
 }
 
+.galerie-grid .bild-rahmen img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
 .galerie-grid figcaption {
   font-size: 0.9rem;
   color: var(--grau-text);
